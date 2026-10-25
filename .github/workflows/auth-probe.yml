@@ -1,0 +1,16 @@
+name: Authentication feasibility probe
+on:
+  push:
+    branches:
+      - codex/auth-probe-20261025
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v3
+      - name: Probe observed official login endpoints using a synthetic account
+        run: python3 scripts/auth_probe.py
