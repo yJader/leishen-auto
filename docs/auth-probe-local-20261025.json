@@ -1,0 +1,51 @@
+{
+  "tested_at_utc": "2026-10-25T09:41:21.227625+00:00",
+  "mode": "synthetic-account",
+  "source": {
+    "url": "https://www.leigod.com/_assets/D9lAhxxM.js",
+    "sha256": "e3fc24cce62d46a6f3ef79a320241c9a1c52c257a9b6db77230da90f784e4386"
+  },
+  "results": [
+    {
+      "path": "/tools/system_time",
+      "http_status": 200,
+      "code": 0,
+      "msg": "成功",
+      "token_received": false
+    },
+    {
+      "path": "/tools/setting/list",
+      "http_status": 200,
+      "code": 0,
+      "msg": "成功",
+      "data": [
+        {
+          "key": "is_off_geetest_login",
+          "value": 1
+        }
+      ],
+      "token_received": false
+    },
+    {
+      "path": "/api/auth/login/v2",
+      "http_status": 200,
+      "code": 400001,
+      "msg": "验证码不能为空",
+      "token_received": false
+    },
+    {
+      "path": "/api/auth/login/v1",
+      "http_status": 418,
+      "json_response": false,
+      "cloudwaf": true
+    },
+    {
+      "path": "/api/auth/login",
+      "http_status": 418,
+      "json_response": false,
+      "cloudwaf": true
+    }
+  ],
+  "real_login_verified": false,
+  "note": "No real account used; probe success does not mean login succeeded."
+}
